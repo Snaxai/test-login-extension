@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="GjensidigeLoginExtension.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="images/Gjensidige_loginExtension_512.png"
+        alt="Gjensidige login extension logo"
+        class="headingLogo"
+      />
+      <h1>Gjensidige <br />Person2Clipboard</h1>
+    </div>
+    <div class="lead">
+      <p>
+        Please enter a valid f&oslash;dselsnummer below, then hit the enter-key
+        or the clipboard-button. Your f&oslash;dselsnummer will then be
+        avialable in your clipboard and in the Chrome Storage. Whenever you want
+        to reload your f&oslash;dselsnummer from the Chrome Storage, hit
+        Ctrl+Shift+P (for person).
+      </p>
+    </div>
+    <div class="formRow">
+      <label for="fnr">F&oslash;dselsnummer: </label>
+      <input type="text" id="fnrInput" />
+      <input
+        type="image"
+        value="CB"
+        id="copyToClipboard"
+        name="copyToClipboard"
+        src="images/Clipboard_64.png"
+        width="32"
+        title="Copy to clipboard and store in Chrome memory"
+      />
+    </div>
+    <div class="formRow queryResults">
+      <div>
+        <strong>F&oslash;dselsnummer: </strong>
+        <span id="queryResultFnr">030662 12709</span>
+      </div>
+      <div>
+        <strong>Navn: </strong> <span id="queryResultNavn">Tvete, Per</span>
+      </div>
+      <div>
+        <strong>Part.ref: </strong>
+        <span id="queryResultPartRef">0003019407</span>
+      </div>
+    </div>
+    <div class="formRow statusbar">
+      <p>Connection to REST endpoint</p>
+      <p>Connection to login-form</p>
+    </div>
+    <script src="GjensidigeLoginExtension.js" defer></script>
+  </body>
+</html>
